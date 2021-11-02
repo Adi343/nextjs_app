@@ -15,6 +15,7 @@ export default function Home() {
           <li>Pricing</li>
           <Link href={`/signup`}>Sign Up</Link>
         </ul>
+        {console.log(process.env)}
       </div>
     </div>
   );
