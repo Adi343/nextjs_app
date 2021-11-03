@@ -1,3 +1,4 @@
+import Link from "next/link";
 export default function signup() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen ">
@@ -11,7 +12,9 @@ export default function signup() {
           <span className="text-white">Sign Up</span>
         </button>
       </form>
-      <a className="underline">Sign Up with social accounts</a>
+      <Link href={`/signin`}>
+        <a className="underline">Sign Up with social accounts</a>
+      </Link>
     </div>
   );
 }

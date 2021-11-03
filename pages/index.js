@@ -2,7 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 export default function Home() {
   return (
-    <div className="flex flex-col  min-h-screen py-2 bg-gray-50">
+    <div className="flex flex-col  min-h-screen py-2 bg-blue-900">
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
@@ -15,7 +15,6 @@ export default function Home() {
           <li>Pricing</li>
           <Link href={`/signup`}>Sign Up</Link>
         </ul>
-        {console.log(process.env)}
       </div>
     </div>
   );
