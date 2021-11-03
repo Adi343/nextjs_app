@@ -13,8 +13,6 @@ function SignInScreen() {
     signInOptions: [firebaseClient.auth.GoogleAuthProvider.PROVIDER_ID],
   };
 
-  // console.log(`provider_id is ${firebase.auth.GoogleAuthProvider.PROVIDER_ID}`);
-
   return (
     <div className="flex flex-col min-h-screen justify-center items-center">
       <h1>My App</h1>
