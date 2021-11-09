@@ -11,6 +11,9 @@ module.exports = {
         DEFAULT: "#B91646",
       },
     },
+    fontFamily: {
+      display: ["Monofett", "cursive"],
+    },
   },
   variants: {
     extend: {},
