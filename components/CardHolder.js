@@ -1,11 +1,12 @@
 import FlashCard from "./FlashCard";
 export default function BestSellers() {
-  const books = ["Book1", "Book2", "Book3", "Book4", "Book5"];
+  const books = ["Git add", "Git commit", "Git push", "Git fetch", "Git merge"];
   return (
-    <div className="h-64 grid grid-cols-3 gap-14 ">
+    <div className="max-h-full grid grid-cols-3 gap-14 ">
       {books.map((book) => {
         return <FlashCard title={book} />;
       })}
+      <div className="w-25 h-25 bg-gray-500"></div>
     </div>
   );
 }

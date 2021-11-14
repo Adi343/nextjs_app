@@ -12,6 +12,7 @@ module.exports = {
     // },
     // },
     fontFamily: {
+      code: ["Source Code Pro", "monospace"],
       display: ["Monofett", "cursive"],
     },
   },
