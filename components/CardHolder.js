@@ -6,7 +6,6 @@ export default function BestSellers() {
       {books.map((book) => {
         return <FlashCard title={book} />;
       })}
-      <div className="w-25 h-25 bg-gray-500"></div>
     </div>
   );
 }
