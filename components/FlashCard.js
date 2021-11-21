@@ -3,28 +3,29 @@ import CodeInput from "./CodeInput";
 export default function FlashCard(props) {
   const [cardClicked, setCardClicked] = useState(false);
   const click = function () {
-    setCardClicked(true);
-    alert(cardClicked);
+    setCardClicked(!cardClicked);
   };
+  console.log(`props are ${JSON.stringify(props)}`);
   return (
     <div
-      className={`flex flex-col w-25 h-25 m-10 rounded-lg bg-black transform skew-y-3 ${
-        cardClicked && `animate-bounce`
+      className={`flex flex-col w-25 h-50 m-10 rounded-lg p-3  ${
+        cardClicked ? `bg-blue-300 animate-bounce duration-100` : `bg-black`
       }`}
     >
-      <span
-        className={`align-middle justify-center text-xl font-code font-semibold text-green-300 `}
-      >
-        {props.title}
-      </span>
-      <span className="align-middle justify-center text-sm font-code font-medium text-justify text-blue-600">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed egestas vel
-        ligula eget iaculis. In diam odio, commodo lobortis est vel, lacinia
-        venenatis ante. In vel mattis tellus, vel egestas purus.
-      </span>
+      {!cardClicked && (
+        <span className="align-middle justify-center text-sm font-code font-medium text-justify text-blue-600">
+          {props.question}
+        </span>
+      )}
+      {cardClicked && <span className="text-red-800">{props.answer}</span>}
 
       {/* <CodeInput /> */}
-      <button className="bg-red-400" onClick={click}>
+      <button
+        className={`w-10 rounded-md   ${
+          cardClicked ? `bg-blue-600` : `bg-red-400`
+        }`}
+        onClick={click}
+      >
         Show
       </button>
     </div>
