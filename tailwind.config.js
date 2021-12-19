@@ -15,6 +15,11 @@ module.exports = {
       code: ["Source Code Pro", "monospace"],
       display: ["Monofett", "cursive"],
     },
+    extend: {
+      animation: {
+        bounce: "bounce 0.90s ",
+      },
+    },
   },
   variants: {
     extend: {},

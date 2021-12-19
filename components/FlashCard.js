@@ -5,7 +5,6 @@ export default function FlashCard(props) {
   const click = function () {
     setCardClicked(!cardClicked);
   };
-  console.log(`props are ${JSON.stringify(props)}`);
   return (
     <div
       className={`flex flex-col w-25 h-50 m-10 rounded-lg p-3  ${
